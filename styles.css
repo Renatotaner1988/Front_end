@@ -1,44 +1,94 @@
 html {
     min-height: 100%;
- }
-
+}
 
 body { 
     margin: 0; 
     padding: 10px; 
-    font-family: Roboto,
-    "Helvetica Neue", sans-serif; 
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif; 
     font-size: 10pt; 
-    background-image: url(img/gestao2.jpg);
+    background-image: url('img/gestao2.jpg');
     background-size: cover;
-    color:azure;
-
+    background-attachment: fixed;
+    color: azure;
 }
 
-.titulo_pagina{
-    
-    color:azure;
-    padding: 2px;
-    font-size: large;
+.navbar {
+    margin-bottom: 30px;
+}
+
+.titulo_pagina {
+    color: azure;
+    padding: 10px;
+    font-size: 24px;
     font-weight: bold;
     border-bottom: solid 2px #ffffff;
-    position:first-line;
+    text-transform: uppercase;
 }
 
-table{
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form .form-label {
+    color: #ffffff;
+}
+
+form .form-control {
+    background-color: #333;
+    border: none;
+    color: #ffffff;
+}
+
+form .form-control::placeholder {
+    color: #cccccc;
+}
+
+table {
     background-color: white;
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 10px;
+table th, table td {
+    border: none;
+    padding: 12px 8px;
     font-size: 16px;
-    transition: 0.2s;
     text-align: center;
+    vertical-align: middle;
+}
+
+table thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+table tbody tr td {
+    position: relative;
+    transition: all 0.3s;
+}
+
+table tbody tr td:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 123, 255, 0.2);
+    z-index: -1;
+    border-radius: 10px;
 }
